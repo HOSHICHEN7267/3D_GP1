@@ -202,12 +202,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5196221107778162064}
     - target: {fileID: 5251523981855227719, guid: d69cd84b2d143a842bf8f2e0eb4c3fdf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 953ad252c57349642be4fac43bc833a9, type: 3}
+    - target: {fileID: 5251523981855227719, guid: d69cd84b2d143a842bf8f2e0eb4c3fdf, type: 3}
       propertyPath: m_SortingLayer
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5251523981855227719, guid: d69cd84b2d143a842bf8f2e0eb4c3fdf, type: 3}
       propertyPath: m_SortingLayerID
       value: 466427151
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251523981855227719, guid: d69cd84b2d143a842bf8f2e0eb4c3fdf, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5251523981855227720, guid: d69cd84b2d143a842bf8f2e0eb4c3fdf, type: 3}
       propertyPath: m_RootOrder

@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class BattleController : MonoBehaviour
 {
+
+    public GameManager GM;
+
     public float velocity = 4;
     public float shootSpeed, shootTimer;
     private bool isShooting;
     public Transform shootPos;
     public GameObject bullet;
     private Rigidbody2D rigidbodyBird;
-    // Start is called before the first frame update
+
     void Start()
     {
         rigidbodyBird = GetComponent<Rigidbody2D>();
         isShooting = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetKey(KeyCode.Space) && !isShooting){
@@ -28,6 +30,14 @@ public class BattleController : MonoBehaviour
         }
     }
 
+    // private void OnTriggerEnter2D(Collider2D other) 
+    // {
+    //     if(other.gameObject.tag == "Laser"){
+    //         Debug.Log("Laser");
+    //         GM.GameOver();
+    //     }  
+    // }
+
     IEnumerator Shoot(){
         isShooting = true;
         GameObject newBullet = Instantiate(bullet, shootPos.position, Quaternion.identity);
@@ -35,4 +45,5 @@ public class BattleController : MonoBehaviour
         yield return new WaitForSeconds(shootTimer);
         isShooting = false;
     }
+    
 }

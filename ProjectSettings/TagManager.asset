@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pipe
+  - Monster
+  - Laser
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -47,6 +50,9 @@ TagManager:
     locked: 0
   - name: Pipe
     uniqueID: 1820279369
+    locked: 0
+  - name: Laser
+    uniqueID: 3265145617
     locked: 0
   - name: Bullet
     uniqueID: 2315891777

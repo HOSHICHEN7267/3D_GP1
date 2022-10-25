@@ -16,7 +16,7 @@ public class MonsterController : MonoBehaviour{
     // Attack
     bool isReady = false;
     bool isAttacked = false;
-    public float firePeriodK = 3;
+    public float firePeriodK = 5;
     float firePeriod;
     float fireCD;
     public int damageUnit = 1000;    // When the monster was hurt, 
@@ -107,7 +107,7 @@ public class MonsterController : MonoBehaviour{
     }
 
     void OnTriggerEnter2D( Collider2D other ){
-        if( other.tag == "Shoot" && isReady ){
+        if( other.tag == "Bullet" && isReady ){
             isAttacked = true;
             monsterHP -= damageUnit;
             if( monsterHP <= 0 ){

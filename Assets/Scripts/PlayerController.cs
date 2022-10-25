@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        Debug.Log("End");
+        //Debug.Log("End");
         if(other.gameObject.tag == "Pipe"){
             GM.GameOver();
         }  

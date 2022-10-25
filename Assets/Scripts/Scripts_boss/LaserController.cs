@@ -5,6 +5,7 @@ using UnityEngine;
 public class LaserController : MonoBehaviour{
     public float speedK = 1f;
     float speed;
+    public GameManager GM;
 
     void Start(){
         speed = GameObject.FindObjectOfType<MonsterController>().mainCameraSize;
@@ -16,8 +17,12 @@ public class LaserController : MonoBehaviour{
     }
 
     void OnTriggerEnter2D( Collider2D other ){
-        if( other.tag == "Player" ){
-            Destroy( this.gameObject );
+        
+        Debug.Log("trigger");
+
+        if( other.gameObject.tag == "Player" ){
+            GM.GameOver();
+            //Destroy( this.gameObject );
         }
     }
 }
