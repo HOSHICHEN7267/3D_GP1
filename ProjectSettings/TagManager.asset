@@ -8,6 +8,7 @@ TagManager:
   - Monster
   - Laser
   - Bullet
+  - Bird
   layers:
   - Default
   - TransparentFX

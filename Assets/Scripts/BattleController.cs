@@ -30,13 +30,17 @@ public class BattleController : MonoBehaviour
         }
     }
 
-    // private void OnTriggerEnter2D(Collider2D other) 
-    // {
-    //     if(other.gameObject.tag == "Laser"){
-    //         Debug.Log("Laser");
-    //         GM.GameOver();
-    //     }  
-    // }
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        //Debug.Log("Laser");
+        if(other.gameObject.tag == "Laser"){
+            Debug.Log("Laser");
+            GM.GameOver();
+        }
+        else if(other.gameObject.tag == "Bullet"){
+            Debug.Log("Bullet");
+        }
+    }
 
     IEnumerator Shoot(){
         isShooting = true;

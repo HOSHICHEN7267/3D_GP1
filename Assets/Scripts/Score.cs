@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
+    public GameManager GM;
+
     public static int score = 0;
     // Start is called before the first frame update
     void Start()
@@ -15,5 +17,9 @@ public class Score : MonoBehaviour
     void Update()
     {
         GetComponent<UnityEngine.UI.Text>().text = score.ToString();
+
+        if(score >= 5){
+            GM.BossScene();
+        }
     }
 }

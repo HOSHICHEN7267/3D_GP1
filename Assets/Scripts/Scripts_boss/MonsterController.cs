@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MonsterController : MonoBehaviour{
+
+    public GameManager GM;
+
     // HP
     bool isDead = false;
     public int monsterHP = 10000;
@@ -136,6 +139,7 @@ public class MonsterController : MonoBehaviour{
         this.transform.position += new Vector3( 0f, -0.5f * mainCameraSize * dTime, 0f );
         if( this.transform.position.y < -2f * mainCameraSize ){
             Destroy( this.transform.parent.gameObject );
+            GM.NormalScene();
         }
     }
 

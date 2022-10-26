@@ -321,7 +321,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 487736690937291174, guid: 1a031aa66e5c8544c87b07f941c26d3c, type: 3}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 1110961384}
+    - target: {fileID: 487736690937291174, guid: 1a031aa66e5c8544c87b07f941c26d3c, type: 3}
       propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 487736690937291174, guid: 1a031aa66e5c8544c87b07f941c26d3c, type: 3}
+      propertyPath: initSpeed
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2687969256790969458, guid: 1a031aa66e5c8544c87b07f941c26d3c, type: 3}
@@ -564,6 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameoverCanvas: {fileID: 35930148}
+  level: 1
 --- !u!4 &1110961385
 Transform:
   m_ObjectHideFlags: 0
@@ -571,7 +580,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110961383}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1032.4609, y: 467.0465, z: 6204.8174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -775,6 +784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7daa8470248200648bd29aa53aef8d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GM: {fileID: 1110961384}
 --- !u!1 &1684576745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,10 +1038,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64be60a5c49955144b122c6066ac54a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GM: {fileID: 1110961384}
   maxTime: 2.5
   pipe: {fileID: 2687969256790969458, guid: 1a031aa66e5c8544c87b07f941c26d3c, type: 3}
   height: 2
   move: {fileID: 1971743671}
+  initSpeed: 3
 --- !u!114 &1971743671 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 487736690937291174, guid: 1a031aa66e5c8544c87b07f941c26d3c, type: 3}
