@@ -5,7 +5,7 @@ using UnityEngine;
 public class PipeSpawner : MonoBehaviour
 {
 
-    public GameManager GM;
+    //public LevelController LC;
 
     public float maxTime = 3f;
     private float timer = 0;
@@ -17,8 +17,8 @@ public class PipeSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        initSpeed = 3;
-        Debug.Log("Level: " + GM.level);
+        initSpeed = 50;
+        Debug.Log("LC.level: " + LevelController.level);
     }
 
     // Update is called once per frame
@@ -32,15 +32,8 @@ public class PipeSpawner : MonoBehaviour
             timer = 0;
         }
 
-        move.speed = initSpeed + (2 * GM.level - 1);
-        // if(Score.score > 10 &&  Score.score <= 20)
-        // {
-        //     move.speed = 4;
-        // }
-        // else if(Score.score > 20 &&  Score.score <= 30)
-        // {
-        //     move.speed = 5;
-        // }
+        move.speed = initSpeed + 10 * (LevelController.level - 1);
+        //Debug.Log("move.speed: " + move.speed);
         
         timer += Time.deltaTime;
     }

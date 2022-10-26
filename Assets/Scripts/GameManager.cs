@@ -5,16 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject gameoverCanvas;
+    public LevelController LC;
 
-    public int level = 1;
+    public GameObject gameoverCanvas;
 
     private int bossScene_timer = 0;
     private bool bossScene_count = false;
 
     private void Start()
     {
-        level = 1;
         gameoverCanvas.SetActive(false);  
         Time.timeScale = 1;  
     }
@@ -37,7 +36,8 @@ public class GameManager : MonoBehaviour
     }
 
     public void NormalScene(){
-        level++;
+        LevelController.level++;
+        Debug.Log("LC.level: " + LevelController.level);
         SceneManager.LoadScene(0);
     }
 

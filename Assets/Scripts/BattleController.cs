@@ -34,11 +34,11 @@ public class BattleController : MonoBehaviour
     {
         //Debug.Log("Laser");
         if(other.gameObject.tag == "Laser"){
-            Debug.Log("Laser");
+            //Debug.Log("Laser");
             GM.GameOver();
         }
         else if(other.gameObject.tag == "Bullet"){
-            Debug.Log("Bullet");
+            //Debug.Log("Bullet");
         }
     }
 
