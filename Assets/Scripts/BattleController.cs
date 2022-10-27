@@ -37,6 +37,9 @@ public class BattleController : MonoBehaviour
             //Debug.Log("Laser");
             GM.GameOver();
         }
+        else if(other.gameObject.tag == "Background"){
+            GM.GameOver();
+        }
         else if(other.gameObject.tag == "Bullet"){
             //Debug.Log("Bullet");
         }

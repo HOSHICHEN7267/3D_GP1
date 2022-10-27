@@ -9,6 +9,7 @@ TagManager:
   - Laser
   - Bullet
   - Bird
+  - Background
   layers:
   - Default
   - TransparentFX
