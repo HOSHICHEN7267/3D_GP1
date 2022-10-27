@@ -16,14 +16,12 @@ public class LaserController : MonoBehaviour{
         this.transform.position -= new Vector3( speedK * speed * Time.deltaTime, 0f, 0f );
     }
 
-    // void OnTriggerEnter2D( Collider2D other ){
-        
-    //     Debug.Log("trigger");
+    void OnTriggerEnter2D( Collider2D other ){
 
-    //     if( other.gameObject.tag == "Bird" ){
-    //         Debug.Log("Bird");
-    //         GM.GameOver();
-    //         //Destroy( this.gameObject );
-    //     }
-    // }
+        if( other.gameObject.tag == "Bird" ){
+            Debug.Log("<Laser> Collide with bird.");
+            GM.GameOver();
+            Destroy( this.gameObject );
+        }
+    }
 }

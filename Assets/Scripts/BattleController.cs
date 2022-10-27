@@ -34,20 +34,18 @@ public class BattleController : MonoBehaviour
     {
         //Debug.Log("Laser");
         if(other.gameObject.tag == "Laser"){
-            //Debug.Log("Laser");
+            Debug.Log("<Bird> Collide with laser.");
             GM.GameOver();
         }
         else if(other.gameObject.tag == "Background"){
             GM.GameOver();
-        }
-        else if(other.gameObject.tag == "Bullet"){
-            //Debug.Log("Bullet");
         }
     }
 
     IEnumerator Shoot(){
         isShooting = true;
         GameObject newBullet = Instantiate(bullet, shootPos.position, Quaternion.identity);
+        Destroy( newBullet.gameObject, 3f );
         newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * Time.fixedDeltaTime, 0f);
         yield return new WaitForSeconds(shootTimer);
         isShooting = false;
