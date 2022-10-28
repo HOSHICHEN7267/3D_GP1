@@ -8,6 +8,7 @@ public class LaserController : MonoBehaviour{
     public GameManager GM;
 
     void Start(){
+        GM = GameObject.FindObjectOfType<GameManager>();
         speed = GameObject.FindObjectOfType<MonsterController>().mainCameraSize;
         Destroy( this.gameObject, 3f * speed );
     }

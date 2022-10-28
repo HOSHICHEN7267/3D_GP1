@@ -6,6 +6,9 @@ public class LevelController : MonoBehaviour
 {
     static LevelController instance;
     static public int level = 1;
+    
+    static public int bossListIndex = 0;
+    public GameObject[] bossList = new GameObject[2];
 
     void Awake () {
         if (instance == null)
@@ -30,5 +33,16 @@ public class LevelController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public GameObject CurrentBoss(){
+        return bossList[bossListIndex];
+    }
+
+    public void AddBossListIndex(){
+        ++bossListIndex;
+        if( bossListIndex >= 2 ){
+            bossListIndex = 0;
+        }
     }
 }

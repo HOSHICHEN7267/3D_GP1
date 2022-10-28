@@ -38,6 +38,7 @@ public class MonsterController : MonoBehaviour{
     float monsterShake = 0.5f;
 
     void Start(){
+        GM = GameObject.FindObjectOfType<GameManager>();
         monsterY = -0.1f * mainCameraSize;
         this.transform.position = new Vector3( mainCameraSize + monsterX * 1.9f, monsterY, 0f );
         firePeriod = mainCameraSize * firePeriodK;

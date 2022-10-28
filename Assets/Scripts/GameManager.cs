@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     {
         gameoverCanvas.SetActive(false);  
         Time.timeScale = 1;  
+        if( SceneManager.GetActiveScene().buildIndex == 1 ){
+            GameObject currBoss = Instantiate(LC.CurrentBoss());
+        }
     }
 
     private void Update()
@@ -37,6 +40,7 @@ public class GameManager : MonoBehaviour
 
     public void NormalScene(){
         LevelController.level++;
+        LC.AddBossListIndex();
         Debug.Log("LC.level: " + LevelController.level);
         SceneManager.LoadScene(0);
     }
@@ -51,6 +55,7 @@ public class GameManager : MonoBehaviour
 
     public void Replay()
     {
+        LevelController.level = 1;
         SceneManager.LoadScene(0);
     }
 }

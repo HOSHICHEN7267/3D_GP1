@@ -16,7 +16,7 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Speed: " + speed);
+        //Debug.Log("Speed: " + speed);
         transform.position += Vector3.left * speed * Time.deltaTime;
     }
 }
