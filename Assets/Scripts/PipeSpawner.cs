@@ -12,12 +12,10 @@ public class PipeSpawner : MonoBehaviour
     public GameObject pipe;
     public float height;
     public Move move;
-    public int initSpeed;
     
     // Start is called before the first frame update
     void Start()
     {
-        initSpeed = 50;
         Debug.Log("LC.level: " + LevelController.level);
     }
 
