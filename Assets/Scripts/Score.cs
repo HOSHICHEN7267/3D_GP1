@@ -7,10 +7,13 @@ public class Score : MonoBehaviour
     public GameManager GM;
 
     public static int score = 0;
+    public static int targetScore = 5;
+
     // Start is called before the first frame update
     void Start()
     {
         score = 0;
+        targetScore = 5 * LevelController.level;
     }
 
     // Update is called once per frame
@@ -18,7 +21,7 @@ public class Score : MonoBehaviour
     {
         GetComponent<UnityEngine.UI.Text>().text = score.ToString();
 
-        if(score >= 5){
+        if(score >= targetScore){
             GM.BossScene();
         }
     }

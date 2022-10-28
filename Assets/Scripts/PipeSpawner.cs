@@ -32,7 +32,7 @@ public class PipeSpawner : MonoBehaviour
             timer = 0;
         }
 
-        move.speed = initSpeed + 10 * (LevelController.level - 1);
+        //move.speed = initSpeed + 10 * (LevelController.level - 1);
         //Debug.Log("move.speed: " + move.speed);
         
         timer += Time.deltaTime;
